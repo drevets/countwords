@@ -121,4 +121,4 @@ console.log(sortedWords)
 //what about words that end with e (i.e. use and using)
 //fuse + fusing
 //what about ties in the number of counts
-
+//also, something is wrong where I'm not actually getting the full array of all instances after concatenating words. dunno why
