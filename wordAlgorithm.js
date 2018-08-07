@@ -29,7 +29,7 @@ const countInstances = (array) => {
   for (let i = 0; i < array.length; i++) {
     let word = array[i]
     if (wordCount[word]) wordCount[word].instances.push(word)
-    else wordCount[word] = {instances: [word]}
+    else wordCount[word] = {word: word, instances: [word]}
   }
   return wordCount
 }
@@ -111,6 +111,7 @@ const countWords = (str, countStopWords, stopWords) => {
 }
 
 const sortedWords = countWords(textSample, true, stopWords)
+console.log(sortedWords)
 
 //now I have the stopwords
 //and a sanitized text string that I can do matches on.
