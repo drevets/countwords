@@ -15,4 +15,4 @@ Uploading document:
 -extract the text
 -the title of those will be the file name
 
-Things to do now:
+//make sure user can change their mind about a file if they want to!

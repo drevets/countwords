@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
-
-//what does React.createRef() do???
+import {extractTextFromFile} from './store/analysis'
 
 class HomePage extends Component {
   constructor() {
@@ -46,14 +45,10 @@ class HomePage extends Component {
   // event.preventDefault();
   }
 
-  handleFileChange = event => {
+  handleFileChange = async event => {
     const file = this.fileInput.current.files[0]
     const objectURL = window.URL.createObjectURL(file);
-    console.log('objectUrl', objectURL)
-    // textract.fromUrl(objectURL, (error, text) => {
-    //   if (error) console.log(error)
-    //   console.log(text)
-    // })
+    await this.props.extractText(objectURL)
     const reader = new FileReader()
     reader.onload = event => {
       console.log(event.target.result)
@@ -107,7 +102,9 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
-  return {}
+  return {
+    extractText: objectURL => dispatch(extractTextFromFile(objectURL))
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
