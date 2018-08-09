@@ -1,0 +1,20 @@
+Is there a way to tell computer that I want there to be a space if it collapses 2 or more punctuation marks??
+Should I add drag and drop functionality?
+
+Next steps:
+Build front end
+Enable data to be sent there via diff calls from diff places
+
+Start here: https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/
+
+Here's more info on reading text from uploaded files:
+https://stackoverflow.com/questions/31746837/reading-uploaded-text-file-contents-in-html
+
+To do:
+Figure out text input + figure out slapping on a backend to this
+How to convert different types of user input into .txt
+
+Uploading document:
+-only specific kinds of docs (i.e. docs with text in them)
+-extract the text
+-the title of those will be the file name
