@@ -10,11 +10,9 @@ Start here: https://www.fullstackreact.com/articles/using-create-react-app-with-
 Here's more info on reading text from uploaded files:
 https://stackoverflow.com/questions/31746837/reading-uploaded-text-file-contents-in-html
 
-To do:
-Figure out text input + figure out slapping on a backend to this
-How to convert different types of user input into .txt
-
 Uploading document:
 -only specific kinds of docs (i.e. docs with text in them)
 -extract the text
 -the title of those will be the file name
+
+Things to do now:

@@ -2,11 +2,9 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 5000;
+const textract = require('textract')
 
-// API calls
-app.get('/api/hello', (req, res) => {
-  res.send({ express: 'Hello From Express' });
-});
+app.use('/api', require('./server/api'))
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files

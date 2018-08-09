@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import textract from 'textract'
+import {connect} from 'react-redux'
 
 //what does React.createRef() do???
 
@@ -102,4 +102,12 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+const mapStateToProps = state => {
+  return {}
+}
+
+const mapDispatchToProps = dispatch => {
+  return {}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
